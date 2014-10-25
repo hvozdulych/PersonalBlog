@@ -1,0 +1,12 @@
+<p>
+  <strong>Title:</strong>
+  <%= @word.spelling %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @word.meaning %>
+</p>
+
+<%= link_to 'Add one more word', new_word_path %>
+<%= link_to 'See all words', words_path %>

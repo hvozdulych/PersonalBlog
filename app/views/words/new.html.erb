@@ -1,0 +1,18 @@
+<%= form_for :word, url: words_path do |f| %>
+ <p>
+    <%= f.label :"type a new word" %><br>
+    <%= f.text_field :spelling %>
+  </p>
+ 
+  <p>
+    <%= f.label :"what does this word mean?" %><br>
+    <%= f.text_area :meaning %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'See all words', words_path %>
+<%= link_to 'Main page', controller: 'welcome' %>

@@ -1,0 +1,17 @@
+<h2>All words</h2>
+ 
+<table cellspacing=0 cellpadding=0>
+  <tr>
+    <th>Word</th>
+    <th>Translate</th>
+  </tr>
+ 
+  <% @words.each do |word| %>
+    <tr>
+      <td class='spelling'><%= word.spelling %></td>
+      <td class="translate"><%= word.meaning %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New word', new_word_path %>
