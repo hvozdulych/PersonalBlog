@@ -9,9 +9,7 @@ group :production do
 	gem 'pg'
 end
 
-group :development, :test do
-  gem 'sqlite3'
-end
+gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,6 +24,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'rails_12factor'
+ruby '2.1.2'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

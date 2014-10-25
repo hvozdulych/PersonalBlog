@@ -13,13 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20141014211820) do
 
-  create_table "articles", :force => true do |t|
-    t.string   "title"
-    t.text     "text"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "words", :force => true do |t|
     t.string   "spelling"
     t.text     "meaning"
