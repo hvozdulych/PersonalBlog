@@ -24,7 +24,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
+gem 'strong_parameters'
 gem 'jquery-rails'
 gem 'rails_12factor'
 ruby '2.1.2'

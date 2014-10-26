@@ -8,14 +8,23 @@ class WordsController < ApplicationController
 	end
 
 	def new
+		@word = Word.new
 	end
 
 	def create
-	  @word = Word.new(params[:word])
- 
-      @word.save
-      redirect_to @word
+	  @word = Word.new(word_params)
+	 
+	  if @word.save
+	    redirect_to @word
+	  else
+	    render 'new'
+	  end
 	end
+ 
+	private
+	  def word_params
+	    params.require(:word).permit(:meaning, :spelling)
+	  end
 
 
 
