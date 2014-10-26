@@ -10,6 +10,12 @@
     <tr>
       <td class='spelling'><%= word.spelling %></td>
       <td class="translate"><%= word.meaning %></td>
+      <td class="show"><%= link_to 'show', word_path(word), :class=>"btn-crud btn-show" %></td>
+      <td class="edit"><%= link_to 'edit', edit_word_path(word), :class=>"btn-crud btn-edit" %></td>
+      <td class="delete"><%= link_to 'delete', word_path(word),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, :class=>"btn-crud btn-delete" %>
+      </td>
     </tr>
   <% end %>
 </table>

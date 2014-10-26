@@ -8,5 +8,6 @@
   <%= @word.meaning %>
 </p>
 
-<%= link_to 'Add one more word', new_word_path %>
+<%= link_to 'Edit', edit_word_path(@word) %><br/>
+<%= link_to 'Add one more word', new_word_path %><br/>
 <%= link_to 'See all words', words_path %>
