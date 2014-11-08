@@ -1,7 +1,9 @@
 PersonalBlog::Application.routes.draw do
   root :to => 'welcome#index'
   resources :words
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
