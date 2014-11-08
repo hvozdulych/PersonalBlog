@@ -1,0 +1,20 @@
+<h2>All Articles</h2>
+ 
+
+ 
+  <% @articles.each do |article| %>
+    <div class="article-wrapper">
+      <h2 class="article-title"><%= link_to article.title, article_path(article) %></h2>
+      <p class="date"><%=article.created_at%></p>
+      <div class="show"><%= link_to 'show', article_path(article), :class=>"btn-crud btn-show" %></div>
+      <div class="edit"><%= link_to 'edit', edit_article_path(article), :class=>"btn-crud btn-edit" %></div>
+      <div class="delete"><%= link_to 'delete', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, :class=>"btn-crud btn-delete" %>
+      </div>
+    </div>  
+  <% end %>
+
+<%= will_paginate @articles %>
+
+<%= link_to 'New article', new_article_path, :class=>"new-article-link" %>

@@ -1,0 +1,14 @@
+.article-wrapper {height: 70px; padding: 10px 0; border-bottom: 2px dashed #1B4A72;}
+.article-title {text-align: left; margin: 0; color: #000; text-decoration: none;}
+.article-title:hover {text-decoration: underline;}
+.date {margin: 5px; color: #999; font-size: 9px;}
+
+.show, .edit, .delete {float: left;}
+.field_with_errors {padding: 2px; background-color: red; display: table;}
+.new-article-link {display: block; margin-top: 20px;}
+.new-article-link:hover {text-transform: uppercase;}
+
+
+.btn-crud {
+	transition: background-color 0.5s;
+}
