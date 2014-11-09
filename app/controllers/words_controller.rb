@@ -1,4 +1,6 @@
 class WordsController < ApplicationController
+    before_filter :authenticate_user!
+
 	def index
 		@words = Word.all
 		@words = Word.paginate(:page => params[:page], :per_page => 10)

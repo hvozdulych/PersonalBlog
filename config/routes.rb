@@ -1,9 +1,12 @@
 PersonalBlog::Application.routes.draw do
+
+
   root :to => 'welcome#index'
   resources :words
   resources :articles do
     resources :comments
   end
+  devise_for :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
