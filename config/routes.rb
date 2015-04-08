@@ -1,12 +1,16 @@
 PersonalBlog::Application.routes.draw do
-
-
   root :to => 'welcome#index'
+
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   resources :words
   resources :articles do
     resources :comments
   end
   devise_for :users
+  ActiveAdmin.routes(self)
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
