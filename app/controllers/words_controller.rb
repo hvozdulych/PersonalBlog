@@ -31,7 +31,7 @@ class WordsController < ApplicationController
 	def update
 	  @word = Word.find(params[:id])
 	 
-	  if @word.update(word_params)
+	  if @word.update_attributes(word_params)
 	    redirect_to @word
 	  else
 	    render 'edit'

@@ -9,7 +9,7 @@
   </div>
 <% end %>
 
-<%= form_for :word, url: words_path do |f| %>
+<%= form_for @word do |f| %>
  <p>
     <%= f.label :"Type a word" %><br>
     <%= f.text_field :spelling %>
